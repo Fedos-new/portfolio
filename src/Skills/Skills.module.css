@@ -1,0 +1,23 @@
+.wraper {
+    height: 100vh;
+    background-color: #DDFEE9;
+    display: flex;
+    justify-content: center;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+     width: 80%;
+     height: 80%;
+     border: 1px solid;
+     padding-top: 60px;
+ }
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

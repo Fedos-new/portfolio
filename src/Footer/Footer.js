@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import style from './Footer.module.css';
 
 function Footer() {
-  return (
-    <div className={style.footer}>
+    return (
+        <div className={style.footer}>
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Footer;

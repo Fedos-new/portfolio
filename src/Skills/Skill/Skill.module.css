@@ -1,0 +1,24 @@
+
+.skillbox img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.skillbox {
+    border: 1px solid black;
+    display: flex;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+}
+
