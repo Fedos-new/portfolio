@@ -1,24 +1,33 @@
+.itemSkill {
 
-.skillbox img {
-    width: 60px;
-    height: 60px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+    background-color: #FDFFFE;
+    width: 200px;
+    border: 1px solid;
+
 }
 
-.skillbox {
-    border: 1px solid black;
+.itemSkill__icon {
     display: flex;
-}
-
-h4 {
-    display: flex;
+    align-items: center;
     justify-content: center;
+    margin: 0px 0px 25px 0px;
 }
 
-.text {
-    display: flex;
-    justify-content: center;
+.itemSkill__title {
 }
 
+.itemSkill__text {
+    border: 1px solid #1E2296;
+    text-align: center;
+    padding: 0px 0px 25px 0px;
+}
+
+.itemSkill__title p {
+    font: 12pt sans-serif;
+    margin: 0px 0px 35px 0px;
+    text-align: center;
+}
+
+.itemSkill__icon img {
+    width: 80px;
+}
