@@ -1,0 +1,18 @@
+.remoteWorkBlock{
+    background-color: #e8f18e;
+    text-align: center;
+    padding: 50px 0;
+
+}
+
+.remoteWorkContainer{
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.title {
+    background-color: #bfbdbd;
+}
+
+

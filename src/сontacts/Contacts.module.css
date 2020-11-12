@@ -1,0 +1,24 @@
+.contactsBlock {
+    background-color: #ffe3e2;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contactsContainer {
+    display: block;
+}
+
+.title {
+    background-color: #bfbdbd;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin: 0 auto;
+    width: 65%;
+}
+.btn {
+    margin-top: 40px;
+}

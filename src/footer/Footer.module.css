@@ -1,0 +1,30 @@
+.footerBlock {
+    background-color: #ebfee2;
+    padding: 50px 0;
+}
+
+.footerContainer {
+    display: block;
+    text-align: center;
+}
+
+.title {
+    background: #bfbdbd;
+}
+
+.footerItems {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.item {
+    height: 60px;
+    width: 60px;
+    background-color: #bfbdbd;
+    list-style-type: none;
+    border: 1px solid black;
+}

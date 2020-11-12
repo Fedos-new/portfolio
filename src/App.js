@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Header from "./Header/Header";
-import Main from "./Main/Main";
-import Skills from "./Skills/Skills";
-import Projects from "./Projects/Projects";
-import Slogan from "./Slogan/Slogan";
-import Contacts from "./Contacts/Contacts";
-import Footer from "./Footer/Footer";
+import Header from "./header/Header";
+import {Main} from "./main/Main";
+import {Skills} from "./skills/Skills";
+import {Projects} from "./projects/Projects";
+import {RemoteWork} from "./remoteWork/RemoteWork";
+import {Contacts} from "./сontacts/Contacts";
+import {Footer} from "./footer/Footer";
+
 
 function App() {
     return (
         <div className="App">
-            <div className="protfolio"></div>
             <Header/>
             <Main/>
             <Skills/>
             <Projects/>
-            <Slogan/>
-            <Contacts/>
+            <RemoteWork/>
+            <Contacts />
             <Footer/>
         </div>
     );
