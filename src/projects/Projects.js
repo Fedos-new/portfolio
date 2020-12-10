@@ -2,13 +2,14 @@ import React from "react";
 import style from './Projects.module.css'
 import styleContainer from '../common/styles/Container.module.css'
 import {Project} from "./project/Project";
+import {Title} from '../common/components/Title';
 
 
 export const Projects = () => {
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <h2 className={style.title}>Projects</h2>
+                <Title title={'Project'} />
                 <div className={style.projects}>
                     <Project title={"ToDoList"}
                              discription={"Type errors will show up in the same console as the build one. "}/>

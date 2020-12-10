@@ -1,7 +1,9 @@
 .header {
     height: 80px;
-    background-color: cornflowerblue;
+    background-color: #1e2326;
+    color: #f0f0f0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border: 1px solid #f0f0f0;
 }

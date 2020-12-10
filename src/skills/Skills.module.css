@@ -1,6 +1,7 @@
 .skillsBlock{
     height: 100vh;
-    background-color: #d7f3bc;
+    background-color: #1e2326;
+    color: #f0f0f0;
     padding: 50px 0;
 }
 
@@ -19,5 +20,5 @@
 }
 
 .title {
-    background-color: #bfbdbd;
+    display: inline-flex;
 }

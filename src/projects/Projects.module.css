@@ -1,6 +1,7 @@
 .projectsBlock{
     /*height: 100vh;*/
-    background-color: #F1E2FF;
+    background-color: #1e2326;
+    color: #f0f0f0;
     padding: 50px 0;
 
 }
@@ -17,9 +18,5 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.title {
-    background-color: #bfbdbd;
 }
 

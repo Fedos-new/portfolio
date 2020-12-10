@@ -1,14 +1,10 @@
 .mainBlock {
     height: 100vh;
-    background-color: #f2d5fa;
+    background-color: #1e2326;
+    color: #f0f0f0;
     padding: 50px 0;
 }
 
-
-.text {
-    width: 350px;
-    background-color: antiquewhite;
-}
 
 .photo {
     width: 350px;
@@ -16,4 +12,14 @@
     background-color: antiquewhite;
 }
 
-
+.text h1 {
+    font-family: poppins,sans-serif;
+    letter-spacing: 2px;
+    font-size: 45px;
+    font-weight: 600;
+    padding: 16px;
+    position: relative;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+}

@@ -1,6 +1,7 @@
 .footerBlock {
-    background-color: #ebfee2;
     padding: 50px 0;
+    background-color: #1e2326;
+    color: #f0f0f0;
 }
 
 .footerContainer {
@@ -9,7 +10,7 @@
 }
 
 .title {
-    background: #bfbdbd;
+    display: inline-flex;
 }
 
 .footerItems {
@@ -26,5 +27,4 @@
     width: 60px;
     background-color: #bfbdbd;
     list-style-type: none;
-    border: 1px solid black;
 }
