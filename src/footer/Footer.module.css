@@ -15,7 +15,7 @@
 
 .footerItems {
     display: flex;
-    border: 1px solid black;
+    border: 1px solid #31383d;
     justify-content: space-between;
     padding: 0;
     margin: 0 auto;

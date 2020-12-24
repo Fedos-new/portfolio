@@ -4,12 +4,12 @@ h2{
     letter-spacing: 2px;
     font-size: 32px;
     font-weight: 500;
-    padding: 16px;
+    padding: 0 16px;
     position: relative;
     text-transform: uppercase;
     display: inline-block;
     margin: 0 0 16px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #31383d;
 }
 
 h2:before {

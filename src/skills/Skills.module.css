@@ -1,5 +1,5 @@
 .skillsBlock{
-    height: 100vh;
+    /*height: 100vh;*/
     background-color: #1e2326;
     color: #f0f0f0;
     padding: 50px 0;
@@ -12,7 +12,6 @@
 }
 
 .skills {
-    border: 1px solid;
     width: 100%;
     display: flex;
     justify-content: space-between;

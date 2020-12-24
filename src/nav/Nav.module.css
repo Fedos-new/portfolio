@@ -1,6 +1,13 @@
+
+
 .nav {
-    border: 1px solid red;
-    width: 300px;
+    border: 1px solid #31383d;
+    width: 380px;
     display: flex;
     justify-content: space-between;
+}
+.nav a{
+    font-weight: 500;
+    color: #f0f0f0;
+    text-decoration: none;
 }
