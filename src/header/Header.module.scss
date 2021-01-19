@@ -1,10 +1,9 @@
+@import '../common/styles/sass/variable';
+
 .headerBlock {
-    background-color: #1e2326;
-}
+  background-color: $bgColor;
 
-
-
-.header {
+  .header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -12,6 +11,11 @@
     height: 80px;
     margin: 0 auto;
     width: 80%;
+  }
+
 }
+
+
+
 
 

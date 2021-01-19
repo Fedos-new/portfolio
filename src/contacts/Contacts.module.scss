@@ -1,0 +1,83 @@
+@import '../common/styles/sass/variable';
+
+.contactsBlock {
+  background-color: $bgSecondColor;
+  color: $textColor;
+  text-align: center;
+  padding: 50px 0;
+
+  .contactsContainer {
+    display: block;
+
+    .formBlock {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 73%;
+
+        .groupDataPerson {
+          display: flex;
+          gap: 30px;
+
+          .email {
+            margin-left: 30px;
+          }
+
+          .name, .email {
+            flex-grow: 1;
+          }
+        }
+
+        .itemFrom {
+          background: transparent;
+          outline: none;
+          border: 1px solid #31383d;
+          color: $textColor;
+          padding: .9em 1em;
+          font-size: 1em;
+          font-family: open sans, sans-serif;
+          width: 100%;
+        }
+
+        .textarea {
+          resize: vertical;
+          min-height: 160px;
+        }
+
+        .groupWrap {
+          position: relative;
+
+          .labelFrom {
+            position: absolute;
+            color: #F0F0F0;
+            top: 11px;
+            left: 7px;
+            padding: 0 14px;
+            opacity: .6;
+            pointer-events: none;
+            transition: 0.3s;
+          }
+
+          .itemFrom:focus ~ .labelFrom,
+          .labelFrom:active {
+            font-weight: bold;
+            color: $primaryColor;
+            top: -13px;
+            left: 10px;
+            padding: 0 9px;
+            background: #262b2f;
+            transition: 0.3s;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+}

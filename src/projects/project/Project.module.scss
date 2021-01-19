@@ -1,0 +1,54 @@
+@import '../portfolio/src/common/styles/sass/variable';
+
+.project {
+  width: 300px;
+  border: 1px solid #31383d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .image {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    //background-color: $bgColor;
+    //opacity: 0.3;
+
+    .bt {
+      position: relative;
+      z-index: 1;
+    }
+
+  }
+
+  .description_project {
+    .description {
+      font-weight: 300;
+      color: $textSecondColor;
+      font-size: 1em;
+    }
+
+    .projectTitle {
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

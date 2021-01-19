@@ -1,0 +1,38 @@
+@import "../common/styles/sass/variable";
+
+.footerBlock {
+  padding: 50px 0;
+  background-color: $bgColor;
+  color: $textColor;
+
+  .footerContainer {
+    display: block;
+    text-align: center;
+
+    .footerItems {
+      display: flex;
+      border: 1px solid #31383d;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0 auto;
+      width: 70%;
+
+      .item {
+        height: 60px;
+        width: 60px;
+        background-color: #bfbdbd;
+        list-style-type: none;
+      }
+    }
+
+    .title {
+      display: inline-flex;
+    }
+  }
+}
+
+
+
+
+
+

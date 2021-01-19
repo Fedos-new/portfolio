@@ -1,27 +1,26 @@
-@import '../common/styles/sass/variable';
+@import "../common/styles/sass/variable";
 
-
-.projectsBlock {
-  background-color: $bgColor;
+.skillsBlock {
+  /*height: 100vh;*/
+  background-color: #1e2326;
   color: $textColor;
   padding: 50px 0;
-  text-align: center;
 
-  .projectsContainer {
+  .skillsContainer {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
 
-    .projects {
+    .skills {
       width: 100%;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      .title {
+        display: inline-flex;
+      }
     }
   }
 }
-
-
-
-
 

@@ -1,0 +1,21 @@
+@import '../common/styles/sass/variable';
+
+.remoteWorkBlock{
+    background-color: $bgColor;
+    text-align: center;
+    padding: 50px 0;
+    .remoteWorkContainer{
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .title {
+            color:$textColor;
+        }
+    }
+}
+
+
+
+
+
+

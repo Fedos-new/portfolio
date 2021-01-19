@@ -28,3 +28,8 @@ h1:before {
 h1::before {
     background-color: rgb(28, 186, 90);
 }
+
+.label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}

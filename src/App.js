@@ -6,6 +6,7 @@ import {Skills} from "./skills/Skills";
 import {Projects} from "./projects/Projects";
 import {Contacts} from "./contacts/Contacts";
 import {Footer} from "./footer/Footer";
+import {RemoteWork} from './remoteWork/RemoteWork';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
             <Main/>
             <Skills/>
             <Projects/>
-            {/*<RemoteWork/>*/}
+            <RemoteWork/>
             <Contacts />
             <Footer/>
         </div>

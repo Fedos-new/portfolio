@@ -6,10 +6,11 @@
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
+    .icon {
+        height: 60px;
+        width: 60px;
+        background-color: cornflowerblue;
+    }
 }
 
-.icon {
-    height: 60px;
-    width: 60px;
-    background-color: cornflowerblue;
-}
+

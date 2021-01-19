@@ -1,0 +1,14 @@
+@import "../common/styles/sass/variable";
+
+.nav {
+    border: 1px solid #31383d;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+    .link {
+        font-size: 20px;
+        font-weight: 400;
+        color: $textColor;
+        text-decoration: none;
+    }
+}

@@ -1,6 +1,7 @@
 import React from "react";
-import style from './RemoteWork.module.css'
+import style from './RemoteWork.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
+import {Button} from '../common/components/Button/Button';
 
 
 export const RemoteWork = () => {
@@ -9,7 +10,7 @@ export const RemoteWork = () => {
         <div className={`${styleContainer.container} ${style.remoteWorkContainer}`}>
             <div >
                 <h2 className={style.title}>Рассматриваю вариант удаленной работы</h2>
-                <button>Нанять меня</button>
+                <Button name={'Написать мне'}/>
             </div>
         </div>
         </div>
