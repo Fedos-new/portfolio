@@ -1,19 +1,21 @@
 import React from 'react';
 import style from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
+import {Button} from "../common/components/Button/Button";
+
 
 export const Main = () => {
+
     return (
         <div className={style.mainBlock}>
-            <div className={styleContainer.container}>
+            <div className={`${styleContainer.container} ${style.mainContainer}`}>
                 <div className={style.text}>
-                    <span>Hi there</span>
-                    <div className={style.title}>
-                        <h1>Roman Fedosov</h1>
+                    <span>Всем привет</span>
+                    <div>
+                        <h1>Роман Федосов</h1>
                     </div>
-                    <p>Frontend developer</p>
+                    <Button name={'Узнать больше'} styleExtra={style.btnLearnMore}/>
                 </div>
-                <div className={style.photo}></div>
 
             </div>
         </div>

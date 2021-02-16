@@ -2,34 +2,41 @@ import React from "react";
 import style from './Projects.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import {Project} from "./project/Project";
-import {Title} from '../common/components/Title';
-import todolistPng from '../assets/todolist.png'
-import socialPng from '../assets/social.png'
-import socialPng2 from '../assets/social.png'
+import {Title} from '../common/components/Title/Title';
+import todolistPng from '../assets/img/todolist.png'
+import socialPng from '../assets/img/socialNetwork.png'
+import limponPng from '../assets/img/limpon.png'
 
 export const Projects = () => {
 
     const social = {
         backgroundImage: `url(${socialPng})`,
+
     }
     const todolist = {
         backgroundImage: `url(${todolistPng})`,
+
     }
-    const social2 = {
-        backgroundImage: `url(${socialPng2})`,
+    const limpon = {
+        backgroundImage: `url(${limponPng})`,
+
     }
+
 
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <Title title={'Project'} />
+                <Title title={'Проекты'}/>
                 <div className={style.projects}>
-                    <Project style={social} title={"Social Network"}
-                             discription={"Stack: JS, Redux, Redux-Form, Axios, REST API"}/>
-                    <Project style={todolist} title={"ToDoList"}
-                             discription={"Stack: TypeScript, Redux, Material-UI, Formik, Axios, REST API"}/>
-                    <Project style={social2} title={"Social Network"}
-                             discription={"You'll have to fix these type errors before you continue development."}/>
+                    <Project style={todolist}
+                             title={"To Do List"}
+                             discription={"Создал SPA приложение - Таск менеджер. Технологии: TypeScript, Redux, Material-UI, Formik, Axios"}/>
+                    <Project style={social}
+                             title={"Social Network"}
+                             discription={"Создал SPA приложение - Социальная сеть. Технологии: JS, Redux, Redux-Form, Axios"}/>
+                    <Project style={limpon}
+                             title={"Limpon"}
+                             discription={"Сверстал сайт для ИТ-индустрии по макету psd. Технологии: HTML,CSS,JQuery"}/>
                 </div>
             </div>
         </div>

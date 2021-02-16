@@ -4,15 +4,17 @@ import {Button} from '../../common/components/Button/Button';
 
 
 export const Project = (props) => {
-    return (
-        <div className={style.project }>
-            <div className={style.image} style={props.style}>
-                <Button name={'View project'} styleExtra={style.bt}/>
+    return (<>
+            <div className={style.project} style={props.style}>
+                <div className={style.blackLayer}>
+
+                <div className={style.description_project}>
+                    <h3 className={style.projectTitle}>{props.title}</h3>
+                    <span className={style.description}>{props.discription}</span>
+                </div>
+                </div>
+                <Button name={'Смотреть'} styleExtra={style.bt}/>
             </div>
-            <div className={style.description_project}>
-                <h3 className={style.projectTitle}>{props.title}</h3>
-                <span className={style.description}>{props.discription}</span>
-            </div>
-        </div>
+        </>
     );
 }

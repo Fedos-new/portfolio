@@ -11,8 +11,7 @@
 
     .footerItems {
       display: flex;
-      border: 1px solid #31383d;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0;
       margin: 0 auto;
       width: 70%;
@@ -20,8 +19,18 @@
       .item {
         height: 60px;
         width: 60px;
-        background-color: #bfbdbd;
         list-style-type: none;
+
+        .icon {
+          height: 32px;
+          width: 32px;
+          fill: $primaryColor;
+          cursor: pointer;
+
+          &:hover {
+            fill: $textSecondColor;
+          }
+        }
       }
     }
 

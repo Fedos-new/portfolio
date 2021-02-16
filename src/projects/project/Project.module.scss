@@ -1,45 +1,75 @@
 @import '../portfolio/src/common/styles/sass/variable';
 
+
 .project {
-  width: 300px;
+  //min-width: 140px;
+  max-height: 250px;
+  height: 290px;
   border: 1px solid #31383d;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
 
-  .image {
-    height: 250px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 0;
-    //background-color: $bgColor;
-    //opacity: 0.3;
-
-    .bt {
-      position: relative;
-      z-index: 1;
+  &:hover {
+    .blackLayer {
+      display: block;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      background: $bgColor;
+      opacity: 0.9;
     }
 
+    .projectTitle {
+      display: block;
+    }
+
+    .description_project {
+      display: block;
+    }
+
+    .bt {
+      display: block;
+    }
   }
 
+  .bt {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: $primaryColor;
+    color: $textColor;
+    z-index: 100;
+  }
+
+  .blackLayer {
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease-in-out;
+    background: 0 0;
+  }
+
+
   .description_project {
+    width: 90%;
+    display: none;
+    position: absolute;
+    left: 5%;
+
     .description {
       font-weight: 300;
-      color: $textSecondColor;
+      color: $textColor;
       font-size: 1em;
+
     }
 
     .projectTitle {
       font-size: 1.5em;
       font-weight: 500;
+
     }
   }
 }

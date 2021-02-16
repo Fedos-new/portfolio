@@ -8,10 +8,8 @@ export const RemoteWork = () => {
     return (
         <div className={style.remoteWorkBlock}>
         <div className={`${styleContainer.container} ${style.remoteWorkContainer}`}>
-            <div >
-                <h2 className={style.title}>Рассматриваю вариант удаленной работы</h2>
+                <h2 className={style.title}>Могу рассматреть вариант удаленной работы</h2>
                 <Button name={'Написать мне'}/>
-            </div>
         </div>
         </div>
     );

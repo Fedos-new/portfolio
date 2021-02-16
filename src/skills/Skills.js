@@ -2,23 +2,44 @@ import React from "react";
 import style from './Skills.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import {Skill} from "./skill/Skill";
-import {Title} from '../common/components/Title';
+import {Title} from '../common/components/Title/Title';
+import sprite from '../assets/svg/sprite.svg'
 
 
 export const Skills = () => {
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-               <Title title={'Skills'}/>
+                <Title title={'Знания и навыки'}/>
                 <div className={style.skills}>
-                    <Skill title={"JS"}
-                           discription={"Type errors will show up in the same console as the build one. "}/>
-                    <Skill title={"CSS"}
-                           discription={"You'll have to fix these type errors before you continue development or build your project. For advanced configuration"}/>
-                    <Skill title={"React"}
-                           discription={"Type errors will show up in the same console as the build one. "}/>
+                    <Skill
+                        svgHref={sprite + "#js"}
+                        title={"JS"}
+                        discription={"Работаю по новым стандартам ES6 и выше"}/>
+
+                    <Skill
+                        svgHref={sprite + "#react"}
+                        title={"React"}
+                        discription={"Создаю SPA приложения. Использую React Router, Formik, Axios , Material-UI и другие"}/>
+                    <Skill
+                        svgHref={sprite + "#redux"}
+                        title={"Redux"}
+                        discription={"Управляю состоянием приложения с помощью Redux. Знаком с Redux Toolkit"}/>
+                    <Skill
+                        svgHref={sprite + "#sass"}
+                        title={"Sass"}
+                        discription={"Использую препроцессоры SCSS/SASS "}/>
+                    <Skill
+                        svgHref={sprite + "#htmlCss"}
+                        title={"HTML/CSS"}
+                        discription={"Делаю адаптивную кроссбраузерную вёрстку, вёрстку e-mail, Flexbox, Grid "}/>
+                    <Skill
+                        svgHref={sprite + "#ts"}
+                        title={"TypeScript"}
+                        discription={"Для уменьшения ошибок при написании кода испольую типизацию TS "}/>
+
                 </div>
             </div>
         </div>
-    );
+    )
 }

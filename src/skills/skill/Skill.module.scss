@@ -1,16 +1,44 @@
+@import "../../common/styles/sass/variable";
+
 .skill {
-    width: 250px;
-    border: 1px solid #31383d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 10px;
+  //max-width: 250px;
+  //min-width: 140px;
+  //max-height: 250px;
+  border: 1px solid #31383d;
+  text-align: center;
+  padding: 2.5rem ;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+
+  .icon {
+    height: 60px;
+    width: 60px;
+    fill: $primaryColor;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,0)
+  }
+  .techTitle {
+    margin-top: 78px;
+  }
+  .description {
+    color: $textSecondColor;
+  }
+
+  &:hover {
     .icon {
-        height: 60px;
-        width: 60px;
-        background-color: cornflowerblue;
+      height: 70px;
+      width: 70px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 0s;
     }
+  }
+
 }
-
-
