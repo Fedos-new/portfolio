@@ -1,15 +1,16 @@
 @import "../../styles/sass/variable";
+@import "../../styles/sass/mixins";
 
 .title h2{
-    font-family: poppins,sans-serif;
+    @include text($TitleFontFamily, 32px, 500);
     letter-spacing: 2px;
-    font-size: 32px;
-    font-weight: 500;
+    line-height: 1.2;
     padding: 0 16px;
     position: relative;
     text-transform: uppercase;
     display: inline-block;
     margin: 0 0 16px;
+    padding: 16px;
     border: 1px solid #31383d;
     &::before {
         content: "";
