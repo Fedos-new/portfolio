@@ -21,7 +21,7 @@ export const AboutMe = () => {
 
                     </p>
                 </div>
-                    <img src={photoJpg} className={style.photo} alt="photo"/>
+                    <img src={photoJpg} className={style.photo} alt="My_photo"/>
             </div>
         </div>
     );

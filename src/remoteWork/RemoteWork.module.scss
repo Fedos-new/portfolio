@@ -1,4 +1,5 @@
 @import '../common/styles/sass/variable';
+@import '../common/styles/sass/mixins';
 
 .remoteWorkBlock{
     background-color: $bgColor;
@@ -9,7 +10,7 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         .title {
-            color:$textColor;
+            @include text($textFontFamily, 1.75em, 500, 1.2);
         }
     }
 }

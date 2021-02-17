@@ -1,5 +1,5 @@
-@import '../portfolio/src/common/styles/sass/variable';
-
+@import '../../common/styles/sass/variable';
+@import '../../common/styles/sass/mixins';
 
 .project {
   //min-width: 140px;
@@ -43,6 +43,7 @@
     background: $primaryColor;
     color: $textColor;
     z-index: 100;
+    line-height: 1.3;
   }
 
   .blackLayer {
@@ -52,7 +53,6 @@
     background: 0 0;
   }
 
-
   .description_project {
     width: 90%;
     display: none;
@@ -60,16 +60,11 @@
     left: 5%;
 
     .description {
-      font-weight: 300;
-      color: $textColor;
-      font-size: 1em;
-
+      @include text($textFontFamily, 1em, 300, 1.7);
     }
 
     .projectTitle {
-      font-size: 1.5em;
-      font-weight: 500;
-
+      @include text($textFontFamily,1.5em,500);
     }
   }
 }

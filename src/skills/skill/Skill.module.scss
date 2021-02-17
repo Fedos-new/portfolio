@@ -1,4 +1,5 @@
-@import "../../common/styles/sass/variable";
+@import '../../common/styles/sass/variable';
+@import '../../common/styles/sass/mixins';
 
 .skill {
   //max-width: 250px;
@@ -6,25 +7,27 @@
   //max-height: 250px;
   border: 1px solid #31383d;
   text-align: center;
-  padding: 2.5rem ;
+  padding: 2.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
-
-
 
   .icon {
     height: 60px;
     width: 60px;
     fill: $primaryColor;
     position: absolute;
-    left:50%;
-    transform: translate(-50%,0)
+    left: 50%;
+    transform: translate(-50%, 0)
   }
+
   .techTitle {
+    @include text($textFontFamily, 1.5em, 500);
     margin-top: 78px;
   }
+
   .description {
+    @include text($textFontFamily, 1em, 300, 1.7);
     color: $textSecondColor;
   }
 

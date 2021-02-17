@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import style from './Projects.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
-import {Project} from "./project/Project";
+import {Project} from './project/Project';
 import {Title} from '../common/components/Title/Title';
 import todolistPng from '../assets/img/todolist.png'
 import socialPng from '../assets/img/socialNetwork.png'
@@ -26,7 +26,7 @@ export const Projects = () => {
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <Title title={'Проекты'}/>
+                <Title title={"Проекты"}/>
                 <div className={style.projects}>
                     <Project style={todolist}
                              title={"To Do List"}

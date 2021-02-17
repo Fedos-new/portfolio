@@ -2,7 +2,6 @@ import React from "react";
 import style from './Contacts.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import {Title} from '../common/components/Title/Title';
-import {Button} from '../common/components/Button/Button';
 
 
 export const Contacts = () => {
@@ -30,8 +29,11 @@ export const Contacts = () => {
                             <textarea name="message" id="" cols="30" rows="10" className={style.itemFrom}/>
                             <label className={style.labelFrom}>Сообщение</label>
                         </div>
+                        <div>
+                            <button type="submit">Отправить</button>
+                        </div>
 
-                        <Button name={'Отправить'} className={style.btn}/>
+                        {/*<Button name={'Отправить'} className={style.btn}/>*/}
                     </form>
                 </div>
             </div>

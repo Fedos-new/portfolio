@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
-import {Button} from "../common/components/Button/Button";
+import {Button} from '../common/components/Button/Button';
 
 
 export const Main = () => {
@@ -14,7 +14,7 @@ export const Main = () => {
                     <div>
                         <h1>Роман Федосов</h1>
                     </div>
-                    <Button name={'Узнать больше'} styleExtra={style.btnLearnMore}/>
+                    <Button name={"Узнать больше"} styleExtra={style.btnLearnMore}/>
                 </div>
 
             </div>

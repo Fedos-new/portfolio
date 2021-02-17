@@ -14,35 +14,35 @@ export const Footer = () => {
                 <div>
                     <ul className={style.footerItems}>
                         <li className={style.item}>
-                            <a href="https://github.com/Fedos-new" target="_blank">
+                            <a href="https://github.com/Fedos-new" target="_blank" rel="noopener noreferrer">
                                 <svg className={style.icon}>
                                     <use href={sprite + "#github"}/>
                                 </svg>
                             </a>
                         </li>
                         <li className={style.item}>
-                            <a href="https://www.linkedin.com/in/roman-fedosov-727630171/" target="_blank">
+                            <a href="https://www.linkedin.com/in/roman-fedosov-727630171/" target="_blank" rel="noopener noreferrer">
                                 <svg className={style.icon}>
                                     <use href={sprite + "#linkedIn"}/>
                                 </svg>
                             </a>
                         </li>
                         <li className={style.item}>
-                            <a href="https://www.instagram.com/fedosrom/" target="_blank">
+                            <a href="https://www.instagram.com/fedosrom/" target="_blank" rel="noopener noreferrer">
                                 <svg className={style.icon}>
                                     <use href={sprite + "#instagram"}/>
                                 </svg>
                             </a>
                         </li>
                         <li className={style.item}>
-                            <a href="https://twitter.com/fedosnew" target="_blank">
+                            <a href="https://twitter.com/fedosnew" target="_blank" rel="noopener noreferrer">
                                 <svg className={style.icon}>
                                     <use href={sprite + "#twitter"}/>
                                 </svg>
                             </a>
                         </li>
                         <li className={style.item}>
-                            <a href="https://t.me/fedosrom" target="_blank">
+                            <a href="https://t.me/fedosrom" target="_blank" rel="noopener noreferrer">
                                 <svg className={style.icon}>
                                     <use href={sprite + "#telegram"}/>
                                 </svg>
