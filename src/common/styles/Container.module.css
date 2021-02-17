@@ -1,7 +1,7 @@
 .container{
-    border: 1px solid #31383d;
     height: 100%;
     width: 68%;
+    max-width: 1120px;
     margin: 0 auto;
     display: flex;
     align-items: center;

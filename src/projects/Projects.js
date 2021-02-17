@@ -27,6 +27,8 @@ export const Projects = () => {
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
                 <Title title={"Проекты"}/>
+                <span className={style.descriptionSpan}>Все эти и другие мои проекты есть на <a
+                    href="https://github.com/Fedos-new">github</a></span>
                 <div className={style.projects}>
                     <Project style={todolist}
                              title={"To Do List"}

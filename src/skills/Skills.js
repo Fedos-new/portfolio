@@ -11,6 +11,7 @@ export const Skills = () => {
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title title={'Знания и навыки'}/>
+                <span className={style.descriptionSpan}>Нравится постоянно развиваться, узучать и пробовать что-то новое</span>
                 <div className={style.skills}>
                     <Skill
                         svgHref={sprite + "#js"}
@@ -20,7 +21,7 @@ export const Skills = () => {
                     <Skill
                         svgHref={sprite + "#react"}
                         title={"React"}
-                        discription={"Создаю SPA приложения. Использую React Router, Formik, Axios , Material-UI и другие"}/>
+                        discription={"Создаю SPA приложения. Использую React Router, Hooks, Formik, Axios , Material-UI и т.д."}/>
                     <Skill
                         svgHref={sprite + "#redux"}
                         title={"Redux"}

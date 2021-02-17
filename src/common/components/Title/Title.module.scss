@@ -2,14 +2,14 @@
 @import "../../styles/sass/mixins";
 
 .title h2{
-    @include text($TitleFontFamily, 32px, 500);
+    @include text($titleFontFamily, 32px, 500);
     letter-spacing: 2px;
     line-height: 1.2;
     padding: 0 16px;
     position: relative;
     text-transform: uppercase;
     display: inline-block;
-    margin: 0 0 16px;
+    margin: 0 0 32px;
     padding: 16px;
     border: 1px solid #31383d;
     &::before {
