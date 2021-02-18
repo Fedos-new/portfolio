@@ -2,7 +2,19 @@
 
 .headerBlock {
   background-color: $bgColor;
+  //position: sticky;
+  //top:0;
+  //z-index: 101;
 
+  #main {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 13;
+  }
   .header {
     display: flex;
     justify-content: flex-end;
@@ -13,6 +25,7 @@
   }
 
 }
+
 
 
 

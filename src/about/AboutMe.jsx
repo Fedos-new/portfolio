@@ -8,15 +8,23 @@ import {Button} from "../common/components/Button/Button";
 
 export const AboutMe = () => {
 
-
     return (
         <div id="about" className={style.aboutBlock}>
             <div className={`${styleContainer.container} ${style.aboutContainer}`}>
                 <div className={style.text}>
                     <span>Привет!</span>
-                    <div>
-                        <p>Я разрабатываю веб-проекты любой сложности. Люблю решать задачи на codewarse. </p>
-                        <Button name={'Скачать CV'} href={cv} download={'CV Roman Fedosov'}/>
+                    <div className={style.textBody}>
+                        <p>Я разрабатываю веб-проекты любой сложности. Люблю решать задачи на <a
+                            className={style.refCodewars}
+                            href="https://www.codewars.com/users/Fedosnew" target="_blank"
+                            rel="noopener noreferrer">Codewars.com</a>. </p>
+                    </div>
+                    <div className={style.btnDownload}>
+                        <Button
+                            name={'Скачать CV'}
+                            href={cv}
+                            download={'CV Roman Fedosov'}
+                        />
                     </div>
                 </div>
                 <img src={photoJpg} className={style.photo} alt="My_photo"/>

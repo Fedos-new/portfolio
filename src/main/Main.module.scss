@@ -1,5 +1,6 @@
 @import "../common/styles/sass/variable";
 @import "../common/styles/sass/mixins";
+@import '../common/components/Button/Button.module';
 
 
 .mainBlock {
@@ -47,9 +48,13 @@
     }
 
     .btnLearnMore {
+      @extend .btnOutline;
+      cursor: pointer;
       background: $primaryColor !important;
       border-color: $primaryColor !important;
       color: $textColor;
+      font-family: open sans,sans-serif;
+      font-size: 16px;
       position: absolute;
       margin-top: 30px;
       left: 50%;

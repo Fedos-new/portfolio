@@ -11,84 +11,33 @@
   .contactsContainer {
     display: block;
 
-    .formBlock {
-      width: 100%;
-
+    .infoGroup {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px 0 60px 0;
 
-      .form {
+      .itemInfo {
         display: flex;
-        flex-direction: column;
-        gap: 30px;
-        width: 84%;
 
-        .groupDataPerson {
+        .textInfo {
           display: flex;
-          gap: 30px;
+          flex-direction: column;
+          align-items: flex-start;
 
-          .email {
-            margin-left: 30px;
-          }
-
-          .name, .email {
-            flex-grow: 1;
+          h4, p {
+            margin: 0;
           }
         }
 
-        .itemFrom {
-          background: transparent;
-          outline: none;
-          border: 1px solid #31383d;
-          color: $textColor;
-          padding: .9em 1em;
-          font-size: 1em;
-          font-family: open sans, sans-serif;
-          width: 100%;
-        }
-
-        .textarea {
-          resize: vertical;
-          min-height: 160px;
-        }
-
-        .groupWrap {
-          position: relative;
-
-          .labelFrom {
-            position: absolute;
-            color: #F0F0F0;
-            top: 11px;
-            left: 7px;
-            padding: 0 14px;
-            opacity: .6;
-            pointer-events: none;
-            transition: 0.3s;
-          }
-
-          .itemFrom:focus ~ .labelFrom,
-          .labelFrom:active {
-            font-weight: bold;
-            color: $primaryColor;
-            top: -13px;
-            left: 10px;
-            padding: 0 9px;
-            background: #262b2f;
-            transition: 0.3s;
-            opacity: 1;
-          }
-        }
-
-        button[type='submit'] {
-          @extend .btnOutline;
-          align-self: flex-end;
-          font-family: open sans,sans-serif;
-          font-size: 16px;
-          border: 2px solid $primaryColorDark;
+        .icon {
+          height: 50px;
+          width: 50px;
+          fill: $primaryColor;
+          padding-right: 20px;
+          margin-top: 4px;
         }
       }
-    }
 
+    }
   }
 }
