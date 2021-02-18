@@ -11,6 +11,8 @@ export const AboutMe = () => {
     return (
         <div id="about" className={style.aboutBlock}>
             <div className={`${styleContainer.container} ${style.aboutContainer}`}>
+                <img src={photoJpg} className={style.photo} alt="My_photo"/>
+
                 <div className={style.text}>
                     <span>Привет!</span>
                     <div className={style.textBody}>
@@ -27,7 +29,7 @@ export const AboutMe = () => {
                         />
                     </div>
                 </div>
-                <img src={photoJpg} className={style.photo} alt="My_photo"/>
+
             </div>
         </div>
     );
