@@ -1,52 +1,17 @@
 @import "../common/styles/sass/variable";
+@import "../common/styles/sass/mixins";
 
 .nav {
-  width: 380px;
+  width: 448px;
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
   justify-content: space-between;
   z-index: 100;
 
-  .link {
-    font-size: 1em;
-    font-weight: 500;
-    color: $textColor;
-    text-decoration: none;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 4px;
-      top: 36px;
-      background: 0 0;
-      transition: all .5s ease-in-out;
-    }
-
-    &:hover {
-      transition: all .3s ease-in-out;
-      color: $primaryColor;
-
-      &::before {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 4px;
-        top: 36px;
-        background: $primaryColor;
-        transition: all .3s ease-in-out;
-      }
-    }
-
-    &:active {
-      transition: all .3s ease-in-out;
-      color: $primaryColor;
-    }
-
-    &:focus {
-      transition: all .3s ease-in-out;
-      color: $primaryColor;
-    }
+  @media screen and (max-width: 400px) {
+    display: none;
   }
 
 }
+

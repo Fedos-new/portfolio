@@ -61,7 +61,7 @@ export const Main = () => {
 
 
     return (
-        <div className={style.mainBlock}>
+        <div id="main" className={style.mainBlock}>
             <Particles className={style.particles} params={particlesOpt}/>
             <Fade bottom>
             <div className={`${styleContainer.container} ${style.mainContainer}`}>

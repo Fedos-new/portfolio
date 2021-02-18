@@ -8,10 +8,10 @@ import sprite from '../assets/svg/sprite.svg'
 
 export const Skills = () => {
     return (
-        <div className={style.skillsBlock}>
+        <div id="skills" className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title title={'Знания и навыки'}/>
-                <span className={style.descriptionSpan}>Нравится постоянно развиваться, узучать и пробовать что-то новое</span>
+                <span className={style.descriptionSpan}>Нравится постоянно развиваться, узучать и пробовать новые технологии</span>
                 <div className={style.skills}>
                     <Skill
                         svgHref={sprite + "#js"}
@@ -21,7 +21,7 @@ export const Skills = () => {
                     <Skill
                         svgHref={sprite + "#react"}
                         title={"React"}
-                        discription={"Создаю SPA приложения. Использую React Router, Hooks, Formik, Axios , Material-UI и т.д."}/>
+                        discription={"Создаю SPA приложения. Использую Hooks, Redux-Thunk, React Router, Formik, Axios, Material-UI и т.д."}/>
                     <Skill
                         svgHref={sprite + "#redux"}
                         title={"Redux"}
@@ -33,7 +33,7 @@ export const Skills = () => {
                     <Skill
                         svgHref={sprite + "#htmlCss"}
                         title={"HTML/CSS"}
-                        discription={"Делаю адаптивную кроссбраузерную вёрстку, вёрстку e-mail, Flexbox, Grid "}/>
+                        discription={"Делаю адаптивную кроссбраузерную вёрстку. Flexbox, Grid, Module CSS."}/>
                     <Skill
                         svgHref={sprite + "#ts"}
                         title={"TypeScript"}

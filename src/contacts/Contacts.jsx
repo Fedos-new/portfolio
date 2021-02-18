@@ -6,7 +6,7 @@ import {Title} from '../common/components/Title/Title';
 
 export const Contacts = () => {
     return (
-        <div className={style.contactsBlock}>
+        <div id="contacts" className={style.contactsBlock}>
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                 <Title title={'Контакты'}/>
                 <div className={style.formBlock}>
@@ -32,8 +32,6 @@ export const Contacts = () => {
                         <div>
                             <button type="submit">Отправить</button>
                         </div>
-
-                        {/*<Button name={'Отправить'} className={style.btn}/>*/}
                     </form>
                 </div>
             </div>

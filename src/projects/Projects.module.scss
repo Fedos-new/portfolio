@@ -12,6 +12,10 @@
     a {
       text-decoration: none;
       color: $textColor;
+      font-weight: 600;
+      &:hover {
+        color: $primaryColor;
+      }
     }
   }
   .projectsContainer {
