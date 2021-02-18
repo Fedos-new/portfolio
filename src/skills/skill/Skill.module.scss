@@ -2,15 +2,15 @@
 @import '../../common/styles/sass/mixins';
 
 .skill {
-  //max-width: 250px;
-  //min-width: 140px;
-  //max-height: 250px;
+  width: 250px;
+  height: 250px;
   border: 1px solid #31383d;
   text-align: center;
   padding: 2.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 16px;
 
   .icon {
     height: 60px;

@@ -2,15 +2,15 @@
 @import '../../common/styles/sass/mixins';
 
 .project {
-  //min-width: 140px;
-  max-height: 250px;
-  height: 290px;
+  width: 330px;
+  height: 300px;
   border: 1px solid #31383d;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   position: relative;
+  margin: 16px;
 
   &:hover {
     .blackLayer {
@@ -64,7 +64,7 @@
     }
 
     .projectTitle {
-      @include text($textFontFamily,1.5em,500);
+      @include text($textFontFamily, 1.5em, 500);
     }
   }
 }

@@ -22,8 +22,8 @@ const Links = (props) => {
                         to={el.linkTo}
                         spy={true}
                         smooth={true}
-                        offset={-70}
-                        duration={500}
+                        offset={1}
+                        duration={600}
                     >
                         {el.title}
                     </Link>
