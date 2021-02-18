@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "662c0073c17c67d04bd6855ff9e7072e",
+    "revision": "66cb43a535ed660134846f311bfe38a3",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "572a5bc97968eed9d528",
-    "url": "/portfolio/static/css/main.3254b3f3.chunk.css"
+    "revision": "b98216a86ca164ed6c2f",
+    "url": "/portfolio/static/css/main.3e1bd31b.chunk.css"
   },
   {
-    "revision": "8a17e30943a23dde34e1",
-    "url": "/portfolio/static/js/2.9d8a864b.chunk.js"
+    "revision": "a1135aa19c74dc2365a0",
+    "url": "/portfolio/static/js/2.ac9e5250.chunk.js"
   },
   {
     "revision": "6ad42f00096b06f6df242d18070d08d1",
-    "url": "/portfolio/static/js/2.9d8a864b.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.ac9e5250.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "572a5bc97968eed9d528",
-    "url": "/portfolio/static/js/main.d247fe74.chunk.js"
+    "revision": "b98216a86ca164ed6c2f",
+    "url": "/portfolio/static/js/main.292725bd.chunk.js"
   },
   {
     "revision": "7107900f59be1fd95810",
     "url": "/portfolio/static/js/runtime-main.af0b07c5.js"
+  },
+  {
+    "revision": "cfe78ae23adc1ceb42c8def28f477621",
+    "url": "/portfolio/static/media/CV Roman Fedosov.cfe78ae2.pdf"
   },
   {
     "revision": "1e6ae1eead98df0dadce3c7f6b10aefc",
@@ -82,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "778525f6405ea0daa98d885a4ba17189",
     "url": "/portfolio/static/media/Geometria.778525f6.eot"
+  },
+  {
+    "revision": "60fda0d6b21734de6314c44f437d4b56",
+    "url": "/portfolio/static/media/bg_remoteWork.60fda0d6.jpg"
   },
   {
     "revision": "5106fa782adc6ed3a8d92ddf29a1ace8",
