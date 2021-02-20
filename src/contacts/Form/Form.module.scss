@@ -57,10 +57,12 @@
         opacity: .6;
         pointer-events: none;
         transition: 0.3s;
+
       }
 
-      .itemFrom:focus ~ .labelFrom,
-      .labelFrom:active {
+      .itemFrom:focus+.labelFrom,
+      .itemFrom:active~.labelFrom
+       {
         font-weight: bold;
         color: $primaryColor;
         top: -13px;
@@ -70,6 +72,13 @@
         transition: 0.3s;
         opacity: 1;
       }
+
+      //.itemFrom:not(:focus)~.labelFrom {
+      //  top: -13px;
+      //  left: 10px;
+      //  padding: 0 9px;
+      //  background: #262b2f;
+      //}
     }
 
     button[type='submit'] {
