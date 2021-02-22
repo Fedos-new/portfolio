@@ -1,23 +1,27 @@
 @import '../common/styles/sass/variable';
 @import '../common/styles/sass/mixins';
 
-.remoteWorkBlock{
-    text-align: center;
-    //background-image: url(../assets/img/bg_remoteWork.jpg);
-    //background-repeat: no-repeat;
-    .blackLayer{
-        background-color: $bgColor;
-        opacity: 0.8;
-        height: 100%;
-        .remoteWorkContainer{
-            flex-direction: column;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            .title {
-                @include text($textFontFamily, 1.75em, 500, 1.2);
-                padding: 76px 0;
+.wrapRWork{
+    z-index: 0;
+    position: relative;
+    .remoteWorkBlock{
+
+        text-align: center;
+        .blackLayer{
+            background-color: $bgColor;
+            opacity: 0.8;
+            height: 100%;
+            .remoteWorkContainer{
+                flex-direction: column;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .title {
+                    @include text($textFontFamily, 1.75em, 500, 1.2);
+                    padding: 40px 0;
+                }
             }
         }
+
     }
 
 }

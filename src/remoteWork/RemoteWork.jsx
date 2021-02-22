@@ -6,6 +6,9 @@ import bg from '../assets/img/bg_remoteWork.jpg'
 
 export const RemoteWork = () => {
     return (
+        <div className={style.wrapRWork}>
+
+
         <Parallax  bgImage={bg} bgImageAlt="bg" strength={930}>
         <div className={style.remoteWorkBlock}>
             <div className={style.blackLayer}>
@@ -17,5 +20,6 @@ export const RemoteWork = () => {
 
         </div>
         </Parallax>
+        </div>
     );
 }

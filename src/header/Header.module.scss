@@ -1,20 +1,10 @@
 @import '../common/styles/sass/variable';
 
 .headerBlock {
-  background-color: $bgColor;
-  //position: sticky;
-  //top:0;
-  //z-index: 101;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 
-  #main {
-    background: transparent;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 13;
-  }
   .header {
     display: flex;
     justify-content: flex-end;
@@ -26,8 +16,19 @@
 
 }
 
+.headerBlock2 {
+  background: $bgColor;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    margin: 0 auto;
+    width: 50%;
+  }
 
-
-
-
+}

@@ -7,7 +7,7 @@ import sprite from '../assets/svg/sprite.svg'
 
 export const Footer = () => {
     return (
-        <div className={style.footerBlock}>
+        <div id="footer" className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
                 <div>
                     <ul className={style.footerItems}>

@@ -10,6 +10,7 @@ export const Form = () => {
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
+    const [isDisable, setIsDisable] = useState(false)
 
     const changeName = (e) => {
         setName(e.currentTarget.value)
@@ -23,20 +24,33 @@ export const Form = () => {
     const changeMessage = (e) => {
         setMessage(e.currentTarget.value)
     }
-    const onSubmit = (e) => {
-        e.preventDefault();
-        axios.post('https://server-smtp.herokuapp.com/sendMessage',
-            {name, email, subject, message}
-        ).then(()=> alert('Ваше письмо улетело этму гению!'))
+    const clearForm =() => {
+        setName('')
+        setEmail('')
+        setSubject('')
+        setMessage('')
     }
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        setIsDisable(true)
+        axios.post('https://server-send-mail.herokuapp.com/sendMessage',
+            {name, email, subject, message}
+        ).then(() => {
+                alert('Ваше письмо улетело этому гению!')
+                setIsDisable(false)
+            }
+        ).catch(() => console.log('какая-то лажа'))
+        clearForm()
+
+    }
 
     return (
         <div className={style.formBlock}>
             <form className={style.form} onSubmit={onSubmit}>
-                <div className={style.groupDataPerson}>
+                <div className={style.formRow}>
 
-                    <div className={`${style.name} ${style.groupWrap}`}>
+                    <div className={`${style.col} ${style.formGroup}`}>
                         <input type="text"
                                className={style.itemFrom}
                                value={name}
@@ -46,32 +60,34 @@ export const Form = () => {
                         <label className={style.labelFrom}>Ваше имя</label>
                     </div>
 
-                    <div className={`${style.email} ${style.groupWrap}`}>
+                    <div className={`${style.col} ${style.formGroup} ${style.colEmail}`}>
                         <input type="email"
+                               name="email"
                                className={style.itemFrom}
                                value={email}
                                onChange={changeEmail}
-                               name="email"
                                required/>
                         <label className={style.labelFrom}>Email</label>
                     </div>
+
                 </div>
 
-                <div className={style.groupWrap}>
+                <div className={style.formGroup}>
                     <input type="text"
+                           name="subject"
                            className={style.itemFrom}
                            value={subject}
                            onChange={changeSubject}
-                           name="subject"
+
                            required/>
                     <label className={style.labelFrom}>Тема</label>
                 </div>
 
-                <div className={style.groupWrap}>
+                <div className={style.formGroup}>
                             <textarea
                                 name="message"
                                 id="" cols="30"
-                                rows="10"
+                                rows="7"
                                 className={style.itemFrom}
                                 value={message}
                                 onChange={changeMessage}
@@ -79,8 +95,8 @@ export const Form = () => {
                     <label className={style.labelFrom}>Сообщение</label>
                 </div>
 
-                <div>
-                    <button type="submit">Отправить</button>
+                <div className={style.wrapBtnSub}>
+                    <button type="submit" disabled={isDisable}>Отправить</button>
                 </div>
             </form>
         </div>

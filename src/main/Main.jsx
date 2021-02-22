@@ -8,10 +8,11 @@ import {particlesSetting} from "./particlesSetting";
 import {Link} from "react-scroll";
 
 
+
 export const Main = () => {
 
+    return (<>
 
-    return (
         <div id="main" className={style.mainBlock}>
             <Particles className={style.particles} params={particlesSetting}/>
             <Fade bottom>
@@ -40,10 +41,10 @@ export const Main = () => {
                                 </Link>
                             </button>
                         </div>
-
                     </div>
                 </div>
             </Fade>
         </div>
+        </>
     );
 }

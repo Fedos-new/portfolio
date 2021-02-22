@@ -2,93 +2,123 @@
 @import '../../common/styles/sass/mixins';
 @import '../../common/components/Button/Button.module';
 
-.formBlock {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 
-  .form {
+.form {
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    display: block;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    background: transparent;
+    outline: none;
+    border: 1px solid $borderColor;
+    color: $textColor;
+    padding: .9em 1em;
+    font-size: 1em;
+    font-family: open sans, sans-serif;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .formRow {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 84%;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-    .groupDataPerson {
-      display: flex;
-      gap: 30px;
-
-      .email {
-        margin-left: 30px;
-      }
-
-      .name, .email {
-        flex-grow: 1;
-      }
-    }
-
-    .itemFrom {
-      background: transparent;
-      outline: none;
-      border: 1px solid #31383d;
-      color: $textColor;
-      padding: .9em 1em;
-      font-size: 1em;
-      font-family: open sans, sans-serif;
-      width: 100%;
-    }
-
-    .textarea {
-      resize: vertical;
-      min-height: 160px;
-    }
-
-    .groupWrap {
+    .col {
       position: relative;
-
-      .labelFrom {
-        position: absolute;
-        color: #F0F0F0;
-        top: 11px;
-        left: 7px;
-        padding: 0 14px;
-        opacity: .6;
-        pointer-events: none;
-        transition: 0.3s;
-
-      }
-
-      .itemFrom:focus+.labelFrom,
-      .itemFrom:active~.labelFrom
-       {
-        font-weight: bold;
-        color: $primaryColor;
-        top: -13px;
-        left: 10px;
-        padding: 0 9px;
-        background: #262b2f;
-        transition: 0.3s;
-        opacity: 1;
-      }
-
-      //.itemFrom:not(:focus)~.labelFrom {
-      //  top: -13px;
-      //  left: 10px;
-      //  padding: 0 9px;
-      //  background: #262b2f;
-      //}
+      flex: 0 0 50%;
+      max-width: 50%;
     }
 
-    button[type='submit'] {
-      @extend .btnOutline;
-      align-self: flex-end;
-      font-family: open sans, sans-serif;
-      font-size: 16px;
-      border: 2px solid $primaryColorDark;
+  }
+
+  .itemFrom {
+    background: transparent;
+    outline: none;
+    border: 1px solid $borderColor;
+    color: $textColor;
+    padding: .9em 1em;
+    font-size: 1em;
+    font-family: open sans, sans-serif;
+    width: 100%;
+  }
+
+  .textarea {
+    resize: vertical;
+    min-height: 160px;
+  }
+
+  .formGroup {
+    position: relative;
+
+    .labelFrom {
+      position: absolute;
+      color: #F0F0F0;
+      top: 11px;
+      left: 7px;
+      padding: 0 14px;
+      opacity: .6;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .itemFrom:valid ~ .labelFrom {
+      top: -13px;
+      left: 10px;
+      padding: 0 9px;
+      background: #262b2f;
+      transition: 0.3s;
+    }
+
+    .itemFrom:focus + .labelFrom,
+    .itemFrom:active ~ .labelFrom {
+      font-weight: bold;
+      color: $primaryColor;
+      top: -13px;
+      left: 10px;
+      padding: 0 9px;
+      background: #262b2f;
+      transition: 0.3s;
+      opacity: 1;
+    }
+
+
+
+
+  }
+
+  .formGroup:nth-child(1) {
+    input {
+      width: 95%;
+    }
+  }
+
+  .wrapBtnSub {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}
+
+button[type='submit'] {
+  @extend .btnOutline;
+  align-self: flex-end;
+  font-family: open sans, sans-serif;
+  font-size: 16px;
+  border: 2px solid $primaryColorDark;
+
+  &:disabled {
+    color: $borderColor;
+    border: 2px solid $borderColor;
+
+    &:hover {
+      background: transparent;
+      cursor: auto;
     }
   }
 }
-
 

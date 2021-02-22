@@ -25,10 +25,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
 
     span {
       margin-bottom: 12px;
       font-size: 20px;
+
       div {
         @include text($textFontFamily, 20px, 300);
         color: $textSecondColor;
@@ -53,7 +55,7 @@
       background: $primaryColor !important;
       border-color: $primaryColor !important;
       color: $textColor;
-      font-family: open sans,sans-serif;
+      font-family: open sans, sans-serif;
       font-size: 16px;
       position: absolute;
       margin-top: 30px;

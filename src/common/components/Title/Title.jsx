@@ -3,7 +3,7 @@ import style from './Title.module.scss'
 
 export const Title = (props) => {
     return (
-        <div className={style.title}>
+        <div className={`${style.title} ${props.styleExtra}`} >
             <h2>{props.title}</h2>
         </div>
 

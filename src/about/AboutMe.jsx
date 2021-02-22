@@ -4,13 +4,16 @@ import styleContainer from '../common/styles/Container.module.css'
 import photoJpg from '../assets/img/photo.jpg'
 import cv from '../assets/cv/CV Roman Fedosov.pdf'
 import {Button} from "../common/components/Button/Button";
+import {Title} from "../common/components/Title/Title";
 
 
 export const AboutMe = () => {
 
     return (
         <div id="about" className={style.aboutBlock}>
+            <Title title={'Обо мне'} styleExtra={style.titleAbout}/>
             <div className={`${styleContainer.container} ${style.aboutContainer}`}>
+
                 <img src={photoJpg} className={style.photo} alt="My_photo"/>
 
                 <div className={style.text}>
