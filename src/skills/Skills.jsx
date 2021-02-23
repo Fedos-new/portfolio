@@ -16,7 +16,7 @@ export const Skills = () => {
                     <Skill
                         svgHref={sprite + "#js"}
                         title={"JS"}
-                        discription={"Работаю по новым стандартам ES6 и выше"}/>
+                        discription={"Работаю по новым стандартам от ES6 и выше"}/>
 
                     <Skill
                         svgHref={sprite + "#react"}

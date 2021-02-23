@@ -1,17 +1,10 @@
 @import './variable';
 
-@mixin text($fontFamily,$fontSize,$fontWeight,$lineHeight:false) {
-  @if $lineHeight {
+@mixin text($fontFamily,$fontSize,$fontWeight) {
     font-family: $fontFamily;
     font-size: $fontSize;
     font-weight: $fontWeight;
     color: $textColor;
-  } @else {
-    font-family: $fontFamily;
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-    line-height: $lineHeight;
-    color: $textColor;
-  }
+
 }
 

@@ -6,12 +6,15 @@
   color: $textColor;
   padding: 50px 0;
 
+
   .skillsContainer {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
     .descriptionSpan{
+      text-align: center;
       @include text($textFontFamily, 1em, 300);
+
       margin-bottom: 32px;
       a {
         text-decoration: none;
@@ -32,3 +35,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .skillsBlock {
+    .skillsContainer {
+      .descriptionSpan{
+        width: 90%;
+      }
+    }
+  }
+}

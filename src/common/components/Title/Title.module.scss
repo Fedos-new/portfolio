@@ -1,30 +1,39 @@
 @import "../../styles/sass/variable";
 @import "../../styles/sass/mixins";
 
-.title h2{
-    @include text($titleFontFamily, 32px, 500);
-    letter-spacing: 2px;
-    line-height: 1.2;
-    padding: 0 16px;
-    position: relative;
-    text-transform: uppercase;
-    display: inline-block;
-    margin: 0 0 32px;
-    padding: 16px;
-    border: 1px solid #31383d;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        bottom: -5px;
-        right: -5px;
-        -webkit-transition: inherit;
-        transition: inherit;
-        box-sizing: border-box;
-        background-color: $primaryColor;
-    }
+.title h2 {
+  @include text($titleFontFamily, 2.0em, 500);
+  letter-spacing: 2px;
+  line-height: 1.2;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 0 32px;
+  padding: 16px;
+  border: 1px solid #31383d;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    bottom: -5px;
+    right: -5px;
+    -webkit-transition: inherit;
+    transition: inherit;
+    box-sizing: border-box;
+    background-color: $primaryColor;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  .title {
+    width: 95%;
+    text-align: center;
 
+    h2 {
+      @include text($titleFontFamily, 1.5em, 500);
+    }
+  }
+}
 

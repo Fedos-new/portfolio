@@ -41,6 +41,24 @@
 }
 
 
+@media screen and (max-width: 500px) {
+  .footerBlock {
+    padding: 30px 0;
+
+    .footerContainer {
+      .footerItems {
+        width: 100%;
+
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
 
 
 

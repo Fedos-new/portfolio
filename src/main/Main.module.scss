@@ -39,7 +39,7 @@
     }
 
     h1 {
-      @include text($titleFontFamily, 45px, 600);
+      @include text($titleFontFamily, 2.8em, 600);
       letter-spacing: 2px;
       line-height: 1.3;
       padding: 16px;
@@ -72,9 +72,22 @@
 
 }
 
+@media screen and (max-width: 500px) {
+  .mainBlock {
+    .text {
+      span {
+        div {
+          @include text($textFontFamily, 20px, 300);
+          color: $textSecondColor;
+        }
+      }
 
-
-
-
-
+      h1 {
+        @include text($titleFontFamily, 2em, 600);
+        padding: 8px;
+        margin: 0 8px;
+      }
+    }
+  }
+}
 

@@ -22,7 +22,6 @@ export const Contacts = () => {
                         </div>
                     </div>
 
-
                     <div className={style.itemInfo}>
                         <svg className={style.icon}>
                             <use href={sprite + "#telegram"}/>

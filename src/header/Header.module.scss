@@ -13,7 +13,6 @@
     margin: 0 auto;
     width: 50%;
   }
-
 }
 
 .headerBlock2 {
@@ -31,4 +30,22 @@
     width: 50%;
   }
 
+}
+
+@media screen and (max-width: 835px) {
+  .headerBlock, .headerBlock2 {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+    .header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 30px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
 }

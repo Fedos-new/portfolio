@@ -60,7 +60,7 @@
     left: 5%;
 
     .description {
-      @include text($textFontFamily, 1em, 300, 1.7);
+      @include text($textFontFamily, 1em, 300);
     }
 
     .projectTitle {

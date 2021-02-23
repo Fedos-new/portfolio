@@ -27,7 +27,7 @@
   }
 
   .description {
-    @include text($textFontFamily, 1em, 300, 1.7);
+    @include text($textFontFamily, 1em, 300);
     color: $textSecondColor;
   }
 
@@ -41,6 +41,29 @@
       transition-duration: 0.5s;
       transition-timing-function: ease-in-out;
       transition-delay: 0s;
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .skill {
+    padding: 2rem;
+    .icon {
+      height: 50px;
+      width: 50px;
+    }
+    .techTitle {
+      @include text($textFontFamily, 1.5em, 500);
+      margin-top: 64px;
+      margin-bottom: 4px;
+    }
+
+    &:hover {
+      .icon {
+        height: 60px;
+        width: 60px;
+      }
     }
   }
 

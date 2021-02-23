@@ -4,7 +4,6 @@
 
 
 .form {
-
   input[type="text"],
   input[type="email"],
   textarea,
@@ -87,8 +86,6 @@
     }
 
 
-
-
   }
 
   .formGroup:nth-child(1) {
@@ -120,5 +117,29 @@ button[type='submit'] {
       cursor: auto;
     }
   }
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .form {
+    width: 95%;
+    margin: 0 auto;
+
+    .formRow {
+      flex-direction: column;
+
+      .col {
+        max-width: 100%;
+      }
+    }
+
+    .formGroup:nth-child(1) {
+      input {
+        width: 100%;
+      }
+    }
+  }
+
 }
 

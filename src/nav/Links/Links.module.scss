@@ -7,6 +7,7 @@
   text-decoration: none;
   position: relative;
   cursor: pointer;
+  margin: 4px 0;
 
   &::before {
     position: absolute;
@@ -48,6 +49,51 @@
     top: 36px;
     background: $primaryColor;
     animation: fadeIn 0.3s linear;
+  }
+}
+
+
+@media screen and (max-width: 835px) {
+  .link {
+    @include text($textFontFamily, 1em, 500);
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    margin: 4px 0;
+
+    &::before {
+      width: 0;
+    }
+
+    &:hover {
+      transition: all .1s ease-in-out;
+      color: $primaryColor;
+      font-weight: 500;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 4px;
+        top: 36px;
+        background: $primaryColor;
+        animation: fadeIn 0.3s linear;
+      }
+    }
+
+
+  }
+
+  .active {
+    color: $primaryColor;
+    font-size: 1em;
+    font-weight: 500;
+
+    &::before {
+      width: 0;
+    }
   }
 }
 
