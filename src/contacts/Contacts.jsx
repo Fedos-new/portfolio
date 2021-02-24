@@ -42,7 +42,7 @@ export const Contacts = () => {
                         </div>
                     </div>
                 </div>
-                <Form/>
+                <Form />
 
             </div>
         </div>

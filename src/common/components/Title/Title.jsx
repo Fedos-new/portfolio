@@ -6,6 +6,5 @@ export const Title = (props) => {
         <div className={`${style.title} ${props.styleExtra}`} >
             <h2>{props.title}</h2>
         </div>
-
     );
 }

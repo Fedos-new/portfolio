@@ -33,11 +33,11 @@ export const Skills = () => {
                     <Skill
                         svgHref={sprite + "#htmlCss"}
                         title={"HTML/CSS"}
-                        discription={"Делаю адаптивную кроссбраузерную вёрстку. Flexbox, Grid, Module CSS."}/>
+                        discription={"Делаю адаптивную кроссбраузерную вёрстку. Flexbox, Grid, Module CSS"}/>
                     <Skill
                         svgHref={sprite + "#ts"}
                         title={"TypeScript"}
-                        discription={"Для уменьшения ошибок при написании кода испольую типизацию TS "}/>
+                        discription={"Для уменьшения ошибок при написании кода использую типизацию TS "}/>
 
                 </div>
             </div>

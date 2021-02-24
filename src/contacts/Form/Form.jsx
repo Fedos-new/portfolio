@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import style from './Form.module.scss'
 import axios from "axios";
+import {Modal} from "../Modal/Modal";
 
 
 export const Form = () => {
@@ -10,6 +11,8 @@ export const Form = () => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [isDisable, setIsDisable] = useState(false)
+    const [isModalActive, setIsModalActive] = useState(false)
+    const [sendStatus, setSendStatus] = useState(false)
 
     const changeName = (e) => {
         setName(e.currentTarget.value)
@@ -23,11 +26,15 @@ export const Form = () => {
     const changeMessage = (e) => {
         setMessage(e.currentTarget.value)
     }
-    const clearForm =() => {
+    const clearForm = () => {
         setName('')
         setEmail('')
         setSubject('')
         setMessage('')
+    }
+
+    const onShowModal = () => {
+        setIsModalActive(!isModalActive)
     }
 
     const onSubmit = (e) => {
@@ -36,16 +43,23 @@ export const Form = () => {
         axios.post('https://server-send-mail.herokuapp.com/sendMessage',
             {name, email, subject, message}
         ).then(() => {
-                alert('Ваше письмо улетело этому гению!')
                 setIsDisable(false)
+                onShowModal()
             }
-        ).catch(() => console.log('какая-то лажа'))
-        clearForm()
-
+        ).catch(() => {
+                console.log('Error send message!')
+                setSendStatus(true)
+                onShowModal()
+            }
+        )
+            .finally(() => {
+                clearForm()
+            })
     }
 
+
     return (
-        <div className={style.formBlock}>
+        <div>
             <form className={style.form} onSubmit={onSubmit}>
                 <div className={style.formRow}>
 
@@ -59,7 +73,7 @@ export const Form = () => {
                         <label className={style.labelFrom}>Ваше имя</label>
                     </div>
 
-                    <div className={`${style.col} ${style.formGroup} ${style.colEmail}`}>
+                    <div className={`${style.col} ${style.formGroup}`}>
                         <input type="email"
                                name="email"
                                className={style.itemFrom}
@@ -98,6 +112,25 @@ export const Form = () => {
                     <button type="submit" disabled={isDisable}>Отправить</button>
                 </div>
             </form>
+            <Modal active={isModalActive} setActive={setIsModalActive}>
+                {!sendStatus
+                    ? <div>
+                        <h5 className={style.mTitle}>Ваше письмо успешно отправленно!</h5>
+                        <p className={style.mText}>Постараюсь ответить в ближайшее время. Спасибо за интерес ко
+                            мне&#128578;</p>
+                    </div>
+                    : <div>
+                        <h5 className={style.mTitle}>Что-то пошло не так!</h5>
+                        <p className={style.mText}>К сожалению, Ваше письмо не отправлено. Ведутся технические работы.
+                            Для связи со мной, пожалуйста, используйте email или telegram. Спасибо за понимание.</p>
+                    </div>
+                }
+                <button
+                    onClick={onShowModal}
+                    className={style.btnOk}
+                >Ок
+                </button>
+            </Modal>
         </div>
     );
 }

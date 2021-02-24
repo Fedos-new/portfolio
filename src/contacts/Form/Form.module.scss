@@ -101,7 +101,7 @@
 
 }
 
-button[type='submit'] {
+button[type='submit'], {
   @extend .btnOutline;
   align-self: flex-end;
   font-family: open sans, sans-serif;
@@ -119,9 +119,23 @@ button[type='submit'] {
   }
 }
 
+.btnOk {
+  @extend .btnOutline;
+  cursor: pointer;
+  background: $primaryColor !important;
+  border-color: $primaryColor !important;
+  @include text($textFontFamily, 1em, 500);
+
+}
+.mTitle {
+  @include text($textFontFamily, 1.2em, 500);
+}
+.mText {
+  @include text($textFontFamily, 1em, 300);
+  color: $textSecondColor;
+}
 
 @media screen and (max-width: 500px) {
-
   .form {
     width: 95%;
     margin: 0 auto;
@@ -133,13 +147,12 @@ button[type='submit'] {
         max-width: 100%;
       }
     }
-
     .formGroup:nth-child(1) {
       input {
         width: 100%;
       }
     }
   }
-
 }
+
 

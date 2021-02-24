@@ -54,6 +54,7 @@
       cursor: pointer;
       background: $primaryColor !important;
       border-color: $primaryColor !important;
+      @include text($titleFontFamily, 2.8em, 600);
       color: $textColor;
       font-family: open sans, sans-serif;
       font-size: 16px;
