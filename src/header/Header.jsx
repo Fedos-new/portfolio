@@ -25,10 +25,10 @@ function Header() {
     return (
         <div className={headerB}>
 
-                <div className={style.header}>
-                    <Nav/>
-                    <BurgerNav/>
-                </div>
+            <div className={style.header}>
+                <Nav/>
+                <BurgerNav/>
+            </div>
 
         </div>
 

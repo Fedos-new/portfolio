@@ -7,13 +7,9 @@ import sprite from "../../assets/svg/sprite.svg";
 const BurgerNav = () => {
     const [menuIsOpen,setMenuIsOpen] = useState(false)
 
-
     const onToggleMenu = () => {
         setMenuIsOpen(!menuIsOpen)
-        console.log(menuIsOpen)
     }
-
-
 
     return (<div className={style.burgerNavWrap}>
             <Links wrap={menuIsOpen ? `${style.burgerNav} ${style.show}` : style.burgerNav}

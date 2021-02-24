@@ -1,5 +1,5 @@
-@import "../../common/styles/sass/variable";
-@import "../../common/components/Button/Button.module";
+@import "../../styles/sass/variable";
+@import "../Button/Button.module";
 
 .modal {
   height: 100vh;
@@ -19,7 +19,7 @@
     max-width: 350px;
     padding: 20px;
     background-color: $bgSecondColor;
-    border: 2px solid $textSecondColor;
+    border: 1px solid $textSecondColor;
     color: $textColor;
     position: relative;
     transition: 0.5s;

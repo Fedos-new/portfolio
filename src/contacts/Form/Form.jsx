@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import style from './Form.module.scss'
-import axios from "axios";
-import {Modal} from "../Modal/Modal";
+import {Modal} from "../../common/components/Modal/Modal";
+import {API} from "../api";
+import {Loader} from "../../common/components/Loader/Loader";
 
 
 export const Form = () => {
@@ -11,8 +12,11 @@ export const Form = () => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [isDisable, setIsDisable] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [sendStatus, setSendStatus] = useState(true)
     const [isModalActive, setIsModalActive] = useState(false)
-    const [sendStatus, setSendStatus] = useState(false)
+
+
 
     const changeName = (e) => {
         setName(e.currentTarget.value)
@@ -32,29 +36,26 @@ export const Form = () => {
         setSubject('')
         setMessage('')
     }
-
     const onShowModal = () => {
         setIsModalActive(!isModalActive)
     }
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
         setIsDisable(true)
-        axios.post('https://server-send-mail.herokuapp.com/sendMessage',
-            {name, email, subject, message}
-        ).then(() => {
-                setIsDisable(false)
-                onShowModal()
-            }
-        ).catch(() => {
-                console.log('Error send message!')
-                setSendStatus(true)
-                onShowModal()
-            }
-        )
-            .finally(() => {
-                clearForm()
-            })
+        setIsLoading(true)
+        try {
+            await API.sendMail({name, email, subject, message})
+            setIsDisable(false)
+            onShowModal()
+
+        } catch (err) {
+            console.log(`Error send message! - ${err}`)
+            setSendStatus(false)
+            onShowModal()
+        }
+        setIsLoading(false)
+        clearForm()
     }
 
 
@@ -113,14 +114,14 @@ export const Form = () => {
                 </div>
             </form>
             <Modal active={isModalActive} setActive={setIsModalActive}>
-                {!sendStatus
+                {sendStatus
                     ? <div>
-                        <h5 className={style.mTitle}>Ваше письмо успешно отправленно!</h5>
+                        <p className={style.mTitle}>Ваше письмо успешно отправленно!</p>
                         <p className={style.mText}>Постараюсь ответить в ближайшее время. Спасибо за интерес ко
-                            мне&#128578;</p>
+                            мне<span role="img" aria-label="smile">&#128578;</span></p>
                     </div>
                     : <div>
-                        <h5 className={style.mTitle}>Что-то пошло не так!</h5>
+                        <p className={style.mTitle}>Что-то пошло не так!</p>
                         <p className={style.mText}>К сожалению, Ваше письмо не отправлено. Ведутся технические работы.
                             Для связи со мной, пожалуйста, используйте email или telegram. Спасибо за понимание.</p>
                     </div>
@@ -128,9 +129,11 @@ export const Form = () => {
                 <button
                     onClick={onShowModal}
                     className={style.btnOk}
-                >Ок
+                >
+                    Ок
                 </button>
             </Modal>
+            <Loader active={isLoading}/>
         </div>
     );
 }

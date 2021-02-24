@@ -35,3 +35,17 @@
 
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background:$bgColor;
+}
+
+::-webkit-scrollbar-thumb {
+    background:$bgSecondColor;
+    &:hover {
+        background:$borderColor;
+    }
+}
+

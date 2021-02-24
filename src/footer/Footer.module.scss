@@ -1,7 +1,7 @@
 @import "../common/styles/sass/variable";
 
 .footerBlock {
-  padding: 50px 0;
+  padding: 30px 0;
   background-color: $bgColor;
   color: $textColor;
 
@@ -20,6 +20,9 @@
         height: 60px;
         width: 60px;
         list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .icon {
           height: 32px;
