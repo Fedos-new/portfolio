@@ -2,17 +2,16 @@ import React, {useState} from "react";
 import style from './Form.module.scss'
 import {Modal} from "../../common/components/Modal/Modal";
 import {API} from "../api";
-import {Loader} from "../../common/components/Loader/Loader";
 
 
-export const Form = () => {
+export const Form = (props) => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [isDisable, setIsDisable] = useState(false)
-    const [isLoading, setIsLoading] = useState(false)
+    // const [isLoading, setIsLoading] = useState(true)
     const [sendStatus, setSendStatus] = useState(true)
     const [isModalActive, setIsModalActive] = useState(false)
 
@@ -43,7 +42,7 @@ export const Form = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         setIsDisable(true)
-        setIsLoading(true)
+        props.setIsLoading(true)
         try {
             await API.sendMail({name, email, subject, message})
             setIsDisable(false)
@@ -54,7 +53,7 @@ export const Form = () => {
             setSendStatus(false)
             onShowModal()
         }
-        setIsLoading(false)
+        props.setIsLoading(false)
         clearForm()
     }
 
@@ -133,7 +132,6 @@ export const Form = () => {
                     Ок
                 </button>
             </Modal>
-            <Loader active={isLoading}/>
         </div>
     );
 }

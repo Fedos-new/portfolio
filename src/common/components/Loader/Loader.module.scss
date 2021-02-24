@@ -6,11 +6,11 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(12, 9, 14, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9;
+  z-index: 109;
   opacity: 0;
   pointer-events: none;
 
@@ -28,6 +28,7 @@
 
 .circleWrap.active {
   opacity: 1;
+  pointer-events: all;
 }
 
 @keyframes loader {
@@ -41,9 +42,10 @@
   }
   75% {
     transform: scale(.75);
-    opacity: 0.4;
+
   }
   to {
     transform: scale(1);
+    opacity: 0.8;
   }
 }

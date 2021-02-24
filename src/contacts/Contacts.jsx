@@ -6,7 +6,7 @@ import {Form} from "./Form/Form";
 import sprite from "../assets/svg/sprite.svg";
 
 
-export const Contacts = () => {
+export const Contacts = (props) => {
     return (
         <div id="contacts" className={style.contactsBlock}>
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
@@ -42,7 +42,7 @@ export const Contacts = () => {
                         </div>
                     </div>
                 </div>
-                <Form />
+                <Form setIsLoading={props.setIsLoading} />
 
             </div>
         </div>

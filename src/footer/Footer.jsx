@@ -22,9 +22,11 @@ export const Footer = () => {
                         {
                             dataSocial.map(el => <li className={style.item} key={el.id}>
                                 <a href={el.href} target="_blank" rel="noopener noreferrer">
-                                    <svg className={style.icon}>
-                                        <use href={sprite + `${el.spriteLink}`}/>
-                                    </svg>
+                                    <div>
+                                        <svg className={style.icon}>
+                                            <use href={sprite + `${el.spriteLink}`}/>
+                                        </svg>
+                                    </div>
                                 </a>
                             </li>)
                         }
