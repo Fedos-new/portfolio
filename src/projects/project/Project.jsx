@@ -10,10 +10,10 @@ export const Project = (props) => {
 
                 <div className={style.description_project}>
                     <h3 className={style.projectTitle}>{props.title}</h3>
-                    <span className={style.description}>{props.discription}</span>
+                    <span className={style.description}>{props.description}</span>
                 </div>
                 </div>
-                <Button name={'Смотреть'} styleExtra={style.bt}/>
+                <Button name={'Смотреть'} href={props.href} styleExtra={style.bt} />
             </div>
         </>
     );

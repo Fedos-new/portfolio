@@ -1,4 +1,5 @@
 @import "../common/styles/sass/variable";
+@import "../common/styles/sass/mixins";
 
 .aboutBlock {
   background-color: #1e2326;
@@ -21,11 +22,12 @@
     width: 40%;
 
     .textBody {
-      margin: 24px 0 44px 0;
+      @include text($textFontFamily, 1em, 300);
+      color: $textSecondColor;
 
       .refCodewars {
         text-decoration: none;
-        color: $textColor;
+        color: $textSecondColor;
         font-weight: 600;
 
         &:hover {
@@ -36,6 +38,40 @@
 
     .btnDownload {
       margin-top: 16px;
+      text-align: end;
+    }
+
+    .ability {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .textTitle span {
+        color: $textSecondColor;
+      }
+
+      .abilityItem {
+        .abilityTitle {
+          text-align: start;
+
+          .icon {
+            height: 26px;
+            width: 26px;
+            fill: $textSecondColor;
+            padding: 0 4px;
+            vertical-align: text-top;
+
+            &:hover {
+              fill: $textColor;
+            }
+          }
+        }
+
+        .abilityTitle span {
+          color: $textSecondColor;
+          margin-left: 8px;
+        }
+      }
     }
   }
 
@@ -47,21 +83,99 @@
 
 }
 
-@media screen and (max-width: 500px) {
-  .aboutBlock {
+[data-tooltip] {
+  position: relative;
 
-      .photo {
-        width: 90%;
-        height: 90%;
-        margin: 22px 0;
-      }
+  &:after {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    content: attr(data-tooltip);
+    padding: 6px 10px;
+    top: 1.4em;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    background: $borderColor;
+    @include text($textFontFamily, 0.9em, 300);
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 2px;
+    transition: opacity 0.5s cubic-bezier(.64, .09, .08, 1), transform 0.5s cubic-bezier(.64, .09, .08, 1);
+  }
+
+  &:hover {
+    &:after {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-80%) translateY(12px);
+    }
+  }
+}
+
+
+.tooltipTriangle {
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-bottom: solid 5px $borderColor;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(-50%) translateY(-2px);
+    top: 1.1em;
+    left: 50%;
+    transition: opacity 0.5s cubic-bezier(.64, .09, .08, 1), transform 0.5s cubic-bezier(.64, .09, .08, 1);
+    z-index: 3;
+  }
+
+  &:hover {
+    &:before {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-80%) translateY(12px);
+    }
+  }
+}
+
+
+@media screen and (max-width: 835px) {
+  .aboutBlock {
 
     .text {
       width: 90%;
       text-align: center;
+
+      .ability {
+        flex-direction: column;
+        align-items: center;
+
+        .abilityItem {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .aboutBlock {
+
+      .photo {
+        width: 85%;
+        height: 85%;
+        margin: 22px 0;
+      }
+
     }
   }
 }
+
+
+
 
 
 

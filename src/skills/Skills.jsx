@@ -7,38 +7,30 @@ import sprite from '../assets/svg/sprite.svg'
 
 
 export const Skills = () => {
+
+    const dataSkills = [
+        {id:1, title:'JS', svgHref:'#js', description: 'Работаю по новым стандартам от ES6 и выше'},
+        {id:2, title:'React', svgHref:'#react', description: 'Создаю SPA приложения. Использую Hooks, Redux-Thunk, React Router, Formik, Axios, Material-UI и т.д.'},
+        {id:3, title:'Redux', svgHref:'#redux', description: 'Управляю состоянием приложения с помощью Redux. Знаком с Redux Toolkit'},
+        {id:4, title:'Sass', svgHref:'#sass', description: 'Использую препроцессоры SCSS/SASS'},
+        {id:5, title:'HTML/CSS', svgHref:'#htmlCss', description: 'Делаю адаптивную кроссбраузерную вёрстку. Flexbox, Grid, Style Module'},
+        {id:6, title:'TypeScript', svgHref:'#ts', description: 'Для уменьшения ошибок при написании кода использую типизацию TS'}
+    ]
+
     return (
         <div id="skills" className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title title={'Знания и навыки'}/>
                 <span className={style.descriptionSpan}>Нравится постоянно развиваться, узучать и пробовать новые технологии</span>
                 <div className={style.skills}>
-                    <Skill
-                        svgHref={sprite + "#js"}
-                        title={"JS"}
-                        discription={"Работаю по новым стандартам от ES6 и выше"}/>
-
-                    <Skill
-                        svgHref={sprite + "#react"}
-                        title={"React"}
-                        discription={"Создаю SPA приложения. Использую Hooks, Redux-Thunk, React Router, Formik, Axios, Material-UI и т.д."}/>
-                    <Skill
-                        svgHref={sprite + "#redux"}
-                        title={"Redux"}
-                        discription={"Управляю состоянием приложения с помощью Redux. Знаком с Redux Toolkit"}/>
-                    <Skill
-                        svgHref={sprite + "#sass"}
-                        title={"Sass"}
-                        discription={"Использую препроцессоры SCSS/SASS "}/>
-                    <Skill
-                        svgHref={sprite + "#htmlCss"}
-                        title={"HTML/CSS"}
-                        discription={"Делаю адаптивную кроссбраузерную вёрстку. Flexbox, Grid, Module CSS"}/>
-                    <Skill
-                        svgHref={sprite + "#ts"}
-                        title={"TypeScript"}
-                        discription={"Для уменьшения ошибок при написании кода использую типизацию TS "}/>
-
+                    {
+                        dataSkills.map(el => <Skill
+                            key={el.id}
+                            svgHref={sprite + el.svgHref}
+                            title={el.title}
+                            description={el.description}
+                            />)
+                    }
                 </div>
             </div>
         </div>

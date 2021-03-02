@@ -8,6 +8,8 @@ export const Button = (props) => {
                 ${props.styleExtra}`}
                 href={props.href}
                download={props.download}
+               target="_blank"
+               rel="noopener noreferrer"
             >
                 {props.name}
             </a>

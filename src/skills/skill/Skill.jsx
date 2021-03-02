@@ -9,7 +9,7 @@ export const Skill = (props) => {
                 <use href={props.svgHref}/>
             </svg>
             <h3 className={style.techTitle}>{props.title}</h3>
-            <span className={style.description}>{props.discription}</span>
+            <span className={style.description}>{props.description}</span>
         </div>
     );
 }
