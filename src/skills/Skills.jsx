@@ -21,7 +21,7 @@ export const Skills = () => {
         <div id="skills" className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
                 <Title title={'Знания и навыки'}/>
-                <span className={style.descriptionSpan}>Нравится постоянно развиваться, узучать и пробовать новые технологии</span>
+                <span className={style.descriptionSpan}>Нравится постоянно развиваться, изучать и пробовать новые технологии</span>
                 <div className={style.skills}>
                     {
                         dataSkills.map(el => <Skill

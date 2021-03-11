@@ -11,10 +11,8 @@ export const Form = (props) => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [isDisable, setIsDisable] = useState(false)
-    // const [isLoading, setIsLoading] = useState(true)
     const [sendStatus, setSendStatus] = useState(true)
     const [isModalActive, setIsModalActive] = useState(false)
-
 
 
     const changeName = (e) => {
@@ -101,7 +99,7 @@ export const Form = (props) => {
                                 name="message"
                                 id="" cols="30"
                                 rows="7"
-                                className={style.itemFrom}
+                                className={`${style.itemFrom} ${style.textarea}`}
                                 value={message}
                                 onChange={changeMessage}
                                 required/>
@@ -115,7 +113,7 @@ export const Form = (props) => {
             <Modal active={isModalActive} setActive={setIsModalActive}>
                 {sendStatus
                     ? <div>
-                        <p className={style.mTitle}>Ваше письмо успешно отправленно!</p>
+                        <p className={style.mTitle}>Ваше письмо успешно отправлено!</p>
                         <p className={style.mText}>Постараюсь ответить в ближайшее время. Спасибо за интерес ко
                             мне<span role="img" aria-label="smile">&#128578;</span></p>
                     </div>

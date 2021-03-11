@@ -7,43 +7,32 @@ import sprite from "../assets/svg/sprite.svg";
 
 
 export const Contacts = (props) => {
+
+    const dataContact = [
+        {id: 1, title: 'Email', svgHref: '#mail', text: 'romanfedoc@ya.ru'},
+        {id: 2, title: 'Telegram', svgHref: '#telegram', text: '@fedosrom'},
+        {id: 3, title: 'Местонахождение', svgHref: '#location', text: 'Россия, Новосибирск'},
+    ]
+
     return (
         <div id="contacts" className={style.contactsBlock}>
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                 <Title title={'Контакты'}/>
                 <div className={style.infoGroup}>
-                    <div className={style.itemInfo}>
-                        <svg className={style.icon}>
-                            <use href={sprite + "#mail"}/>
-                        </svg>
-                        <div className={style.textInfo}>
-                            <h4>Email</h4>
-                            <p>romanfedoc@ya.ru</p>
-                        </div>
-                    </div>
-
-                    <div className={style.itemInfo}>
-                        <svg className={style.icon}>
-                            <use href={sprite + "#telegram"}/>
-                        </svg>
-                        <div className={style.textInfo}>
-                            <h4>Telegram</h4>
-                            <p>@fedosrom</p>
-                        </div>
-                    </div>
-
-                    <div className={style.itemInfo}>
-                        <svg className={style.icon}>
-                            <use href={sprite + "#location"}/>
-                        </svg>
-                        <div className={style.textInfo}>
-                            <h4>Местонахождение</h4>
-                            <p>Россия, Новосибирск</p>
-                        </div>
-                    </div>
+                    {
+                        dataContact.map(el => <div key={el.id} className={style.itemInfo}>
+                                <svg className={style.icon}>
+                                    <use href={sprite + el.svgHref}/>
+                                </svg>
+                                <div className={style.textInfo}>
+                                    <h4>{el.title}</h4>
+                                    <p>{el.text}</p>
+                                </div>
+                            </div>
+                        )
+                    }
                 </div>
-                <Form setIsLoading={props.setIsLoading} />
-
+                <Form setIsLoading={props.setIsLoading}/>
             </div>
         </div>
     );
