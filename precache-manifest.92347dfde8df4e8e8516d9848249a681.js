@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "637049acb34d73fe020f54bdaf8c5d4a",
+    "revision": "6b63bc490e0936547b2e1250bcc55622",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "4c9e3e72f496aa3a77b8",
+    "revision": "32a3f0a8aa9a7f046ebd",
     "url": "/portfolio/static/css/main.d0e8f9d5.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.7ef897b2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4c9e3e72f496aa3a77b8",
-    "url": "/portfolio/static/js/main.f675d7b5.chunk.js"
+    "revision": "32a3f0a8aa9a7f046ebd",
+    "url": "/portfolio/static/js/main.6e1d85cc.chunk.js"
   },
   {
     "revision": "7107900f59be1fd95810",
     "url": "/portfolio/static/js/runtime-main.af0b07c5.js"
   },
   {
-    "revision": "211c1fcbac2e2472c7929188a9f87876",
-    "url": "/portfolio/static/media/CV Roman Fedosov.211c1fcb.pdf"
+    "revision": "3da875e2c6a26f6599e6e0b30945fe9a",
+    "url": "/portfolio/static/media/CV Roman Fedosov.3da875e2.pdf"
   },
   {
     "revision": "1e6ae1eead98df0dadce3c7f6b10aefc",
