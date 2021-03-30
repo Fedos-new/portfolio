@@ -9,9 +9,9 @@ export const Footer = () => {
     const dataSocial = [
         {id: 1, href: 'https://github.com/Fedos-new', spriteLink: "#github"},
         {id: 2, href: 'https://www.linkedin.com/in/roman-fedosov-727630171/', spriteLink: "#linkedIn"},
-        {id: 3, href: 'https://www.instagram.com/fedosrom/', spriteLink: "#instagram"},
+        {id: 3, href: 'https://www.instagram.com/fdsrmn/', spriteLink: "#instagram"},
         {id: 4, href: 'https://twitter.com/fedosnew', spriteLink: "#twitter"},
-        {id: 5, href: 'https://t.me/fedosrom', spriteLink: "#telegram"},
+        {id: 5, href: 'https://t.me/rmnfds', spriteLink: "#telegram"},
     ]
 
     return (

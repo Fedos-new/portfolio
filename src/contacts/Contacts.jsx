@@ -10,7 +10,7 @@ export const Contacts = (props) => {
 
     const dataContact = [
         {id: 1, title: 'Email', svgHref: '#mail', text: 'romanfedoc@ya.ru'},
-        {id: 2, title: 'Telegram', svgHref: '#telegram', text: '@fedosrom'},
+        {id: 2, title: 'Telegram', svgHref: '#telegram', text: '@fdsrmn'},
         {id: 3, title: 'Местонахождение', svgHref: '#location', text: 'Россия, Новосибирск'},
     ]
 
