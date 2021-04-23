@@ -8,28 +8,25 @@ import {particlesSetting} from "./particlesSetting";
 import {Link} from "react-scroll";
 
 
-
 export const Main = () => {
 
     return (<>
 
-        <div id="main" className={style.mainBlock}>
-            <Particles className={style.particles} params={particlesSetting}/>
-            <Fade bottom>
-                <div className={`${styleContainer.container} ${style.mainContainer}`}>
-                    <div className={style.text}>
-                        <ReactTypingEffect
-                            speed={80}
-                            eraseSpeed={30}
-                            eraseDelay={3000}
-                            text={["I'm frontend developer", "Я фронтенд разработчик",]}
-                        />
-                        <div>
-                            <h1>Роман Федосов</h1>
-                        </div>
-                        <div>
-                            <button className={style.btnLearnMore}
-                            >
+            <div id="main" className={style.mainBlock}>
+                <Particles className={style.particles} params={particlesSetting}/>
+                <Fade bottom>
+                    <div className={`${styleContainer.container} ${style.mainContainer}`}>
+                        <div className={style.text}>
+                            <ReactTypingEffect
+                                speed={80}
+                                eraseSpeed={30}
+                                eraseDelay={3000}
+                                text={["I'm frontend developer", "Я фронтенд разработчик",]}
+                            />
+                            <div>
+                                <h1>Роман Федосов</h1>
+                            </div>
+                            <div>
                                 <Link
                                     to='about'
                                     spy={true}
@@ -37,14 +34,15 @@ export const Main = () => {
                                     offset={-70}
                                     duration={500}
                                 >
-                                    Узнать Больше
+                                    <button className={style.btnLearnMore}>
+                                        Узнать Больше
+                                    </button>
                                 </Link>
-                            </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Fade>
-        </div>
+                </Fade>
+            </div>
         </>
     );
 }
